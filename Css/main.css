@@ -24,9 +24,6 @@ body {
   background-color: var(--background-cd);
   height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Sidebar Code */
@@ -287,6 +284,62 @@ body {
 }
 /* Sidebar Code */
 
+.pazzle {
+  background-color: white;
+  height: 550px;
+  width: 1200px;
+  border-radius: var(--border-radius);
+  position: absolute;
+  left: 360px;
+  top: 20px;
+}
+
+.rectanglecontainer {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: auto auto 180px;
+  padding-left: 343px;
+  position: absolute;
+  bottom: 60px;
+}
+
+.infoRectangle {
+  background-color: var(--text-icon-cd);
+  height: 250px;
+  width: 500px;
+  border-radius: var(--border-radius);
+}
+
 .codeRectangle {
   background-color: var(--text-icon-cd);
+  height: 250px;
+  width: 500px;
+  border-radius: var(--border-radius);
+}
+
+.boy {
+  z-index: 99;
+  width: 200px;
+  position: absolute;
+  bottom: 10px;
+  left: 250px;
+}
+
+.rectanglenext {
+  width: 120px;
+  height: 40px;
+  border: 2px var(--background-cd) solid;
+  border-radius: var(--border-radius);
+  position: absolute;
+  bottom: 100px;
+  left: 400px;
+}
+
+.textnext {
+  color: var(--background-cd);
+  font-size: 23px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 106px;
+  left: 406px;
 }
