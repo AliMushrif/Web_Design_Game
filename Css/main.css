@@ -9,6 +9,7 @@
   --text-icon-cd: black;
   --theme-color: #ffc648;
   --border-radius: 12px;
+  --transition: all 0.5s ease;
 }
 
 body {
@@ -23,9 +24,14 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 240px;
+  width: 78px;
   background-color: var(--theme-color);
   padding: 6px 14px;
+  transition: var(--transition);
+}
+
+.sidebar.active {
+  width: 240px;
 }
 
 .sidebar .logo_content .logo {
@@ -34,6 +40,14 @@ body {
   height: 50px;
   width: 100%;
   align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.sidebar.active .logo_content .logo {
+  opacity: 1;
+  pointer-events: none;
 }
 
 .logo_content .logo i {
@@ -49,7 +63,7 @@ body {
 .sidebar #btn {
   position: absolute;
   color: var(--text-icon-cd);
-  left: 90%;
+  left: 50%;
   top: 5px;
   font-size: 20px;
   height: 50px;
@@ -57,6 +71,10 @@ body {
   text-align: center;
   line-height: 50px;
   transform: translateX(-50%);
+}
+
+.sidebar.active #btn {
+  left: 90%;
 }
 
 .sidebar ul {
@@ -76,7 +94,7 @@ body {
   position: absolute;
   left: 122px;
   top: 0;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
   border-radius: var(--border-radius);
   height: 35px;
   width: 122px;
@@ -87,10 +105,15 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: 0s;
+  display: block;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;
 }
 
 .sidebar ul li:hover .tooltip {
-  transition: all 0.5s ease;
+  transition: var(--transition);
   opacity: 1;
   top: 50%;
 }
@@ -115,6 +138,12 @@ body {
   z-index: 99;
   color: var(--text-icon-cd);
   font-size: 22px;
+  transition: var(--transition);
+}
+
+.sidebar ul li .fa-magnifying-glass:hover {
+  background-color: var(--text-icon-cd);
+  color: var(--theme-color);
 }
 
 .sidebar ul li a {
@@ -123,7 +152,8 @@ body {
   align-items: center;
   text-decoration: none;
   border-radius: var(--border-radius);
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
+  white-space: nowrap;
 }
 .sidebar ul li a:hover {
   color: var(--theme-color);
@@ -138,6 +168,17 @@ body {
   text-align: center;
 }
 
+.sidebar .links_name {
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.sidebar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .sidebar .profile_content {
   position: absolute;
   color: var(--text-icon-cd);
@@ -150,12 +191,25 @@ body {
   position: relative;
   padding: 10px 6px;
   height: 60px;
+  background-color: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
   background-color: #dba124;
 }
 
 .profile_content .profile .profile_details {
   display: flex;
   align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .profile .profile_details img {
@@ -180,20 +234,32 @@ body {
 
 .profile #log_out {
   position: absolute;
-  left: 88%;
+  left: 50%;
   bottom: 5px;
   transform: translateX(-50%);
   min-width: 50px;
   line-height: 50px;
   font-size: 20px;
   border-radius: var(--border-radius);
+  text-align: center;
+  transition: all 0.4s ease;
+  background-color: #dba124;
+}
+
+.sidebar.active .profile #log_out {
+  left: 88%;
+}
+
+.sidebar.active .profile #log_out {
+  background-color: none;
 }
 
 .home_content {
   position: absolute;
   height: 100%;
-  width: calc(100% - 240px);
-  left: 240px;
+  width: calc(100% - 78px);
+  left: 78px;
+  transition: var(--transition);
 }
 
 .home_content .text {
@@ -201,4 +267,9 @@ body {
   font-weight: 500;
   color: var(--text-icon-cd);
   margin: 12px;
+}
+
+.sidebar.active ~ .home_content {
+  width: calc(100% - 240px);
+  left: 240px;
 }
