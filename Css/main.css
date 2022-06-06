@@ -323,6 +323,7 @@ body {
   position: absolute;
   bottom: 10px;
   left: 250px;
+  user-select: none;
 }
 
 .rectanglenext {
@@ -342,4 +343,5 @@ body {
   position: absolute;
   bottom: 106px;
   left: 406px;
+  user-select: none;
 }
