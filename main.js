@@ -17,6 +17,7 @@ const paragraphs = ["First", "Second", "Third", "Fourth"];
 function changeText() {
   let text = `${paragraphs[time]} Paragraph`;
   if (text === "Fourth Paragraph") {
+    document.getElementById("name").innerHTML = "Fourth Paragraph";
     document.getElementById("ch").value = "Hint";
   } else {
     document.getElementById("name").innerHTML = text;
