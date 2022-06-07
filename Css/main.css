@@ -319,7 +319,7 @@ body {
 }
 
 .boy {
-  z-index: 99;
+  z-index: 1;
   width: 200px;
   position: absolute;
   bottom: 10px;
@@ -345,11 +345,12 @@ body {
   font-size: 23px;
   font-weight: 400;
   position: absolute;
-  bottom: 70px;
-  left: 460px;
+  bottom: 76px;
+  left: 405px;
   user-select: none;
   padding: 2px 5px;
   cursor: pointer;
+  z-index: 2;
 }
 
 p {
