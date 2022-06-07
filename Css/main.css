@@ -308,6 +308,7 @@ body {
   height: 250px;
   width: 500px;
   border-radius: var(--border-radius);
+  position: relative;
 }
 
 .codeRectangle {
@@ -332,16 +333,30 @@ body {
   border: 2px var(--background-cd) solid;
   border-radius: var(--border-radius);
   position: absolute;
-  bottom: 100px;
+  bottom: 70px;
   left: 400px;
 }
 
 .textnext {
   color: var(--background-cd);
+  background-color: var(--text-icon-cd);
+  border: solid 2px var(--background-cd);
+  border-radius: 6px;
   font-size: 23px;
   font-weight: 400;
   position: absolute;
-  bottom: 106px;
+  bottom: 76px;
   left: 406px;
   user-select: none;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+p {
+  color: var(--background-cd);
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
