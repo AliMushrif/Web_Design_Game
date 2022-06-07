@@ -337,7 +337,7 @@ body {
   left: 400px;
 }
 
-.textnext {
+#ch {
   color: var(--background-cd);
   background-color: var(--text-icon-cd);
   border: solid 2px var(--background-cd);
@@ -345,8 +345,8 @@ body {
   font-size: 23px;
   font-weight: 400;
   position: absolute;
-  bottom: 76px;
-  left: 406px;
+  bottom: 70px;
+  left: 460px;
   user-select: none;
   padding: 2px 5px;
   cursor: pointer;

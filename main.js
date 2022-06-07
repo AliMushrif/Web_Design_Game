@@ -11,15 +11,17 @@ searchBtn.onclick = function () {
 
 //
 
-var time = 0;
-var btnCh = document.querySelector(".textnext");
+let time = 0;
+const paragraphs = ["First", "Second", "Third", "Fourth"];
 
-function changeText(txt) {
-  var txt = time === 0 ? "No..." : "Second time";
-  document.getElementById("name").innerHTML = txt;
-  time++;
-  //
-  btnCh.addEventListener("click", () => {
-    btnCh.innerText = "Hint";
-  });
+function changeText() {
+  let text = `${paragraphs[time]} Paragraph`;
+  if (text === "Fourth Paragraph") {
+    document.getElementById("ch").value = "Hint";
+  } else {
+    document.getElementById("name").innerHTML = text;
+  }
+  if (paragraphs[time + 1]) {
+    time++;
+  }
 }
