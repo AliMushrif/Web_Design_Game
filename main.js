@@ -17,7 +17,7 @@ const paragraphs = ["First", "Second", "Third", "Fourth"];
 function changeText() {
   let text = `${paragraphs[time]} Paragraph`;
   if (text === "Fourth Paragraph") {
-    document.getElementById("name").innerHTML = "Fourth Paragraph";
+    document.getElementById("name").innerHTML = "Another Text";
     document.getElementById("ch").value = "Hint";
   } else {
     document.getElementById("name").innerHTML = text;
@@ -26,3 +26,30 @@ function changeText() {
     time++;
   }
 }
+//
+// let colCon = document.querySelector(".columnContanter");
+// let cssCode = document.getElementById("csscode");
+// let cssCodeRg = ".alignCulomn{display: flex;}";
+// let submitbtn = document.querySelector(".reg");
+
+// submitbtn.addEventListener("click", () => {
+//   cssCode = cssCode.value;
+//   if (cssCodeRg == cssCode) {
+//     colCon.style.display = "flex";
+//   } else {
+//     document.getElementById("csscode").value = "wrong";
+//   }
+// });
+//
+document.getElementById("codeAnwsoer").onsubmit = function (e) {
+  let colCon = document.querySelector(".columnContanter");
+  let cssCode = document.getElementById("csscode").value;
+  let cssCodeRg = /.alignCulomn{display: flex;}/gi;
+  let applyCode = cssCode.match(cssCodeRg);
+  if (applyCode) {
+    colCon.style.display = "flex";
+  } else {
+    document.getElementById("csscode").value = "wrong";
+  }
+  e.preventDefault();
+};

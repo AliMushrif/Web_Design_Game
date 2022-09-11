@@ -284,16 +284,6 @@ body {
 }
 /* Sidebar Code */
 
-.pazzle {
-  background-color: white;
-  height: 550px;
-  width: 1200px;
-  border-radius: var(--border-radius);
-  position: absolute;
-  left: 360px;
-  top: 20px;
-}
-
 .rectanglecontainer {
   display: grid;
   width: 100vw;
@@ -318,12 +308,40 @@ body {
   border-radius: var(--border-radius);
 }
 
+#csscode {
+  background-color: transparent;
+  border-color: var(--theme-color);
+  color: white;
+  border-radius: 4px;
+  border-width: 5px;
+  padding: 0 0 150px 0;
+  width: 300px;
+  position: absolute;
+  bottom: 100px;
+  right: 450px;
+}
+
+#csscode:focus {
+  background-color: transparent;
+  outline-style: none;
+  border-color: var(--theme-color);
+  color: white;
+  border-radius: 4px;
+  border-width: 5px;
+  padding: 0 0 150px 0;
+  width: 300px;
+  position: absolute;
+  bottom: 100px;
+  right: 450px;
+  caret-color: white;
+}
+
 .boy {
   z-index: 1;
   width: 200px;
   position: absolute;
-  bottom: 10px;
-  left: 250px;
+  bottom: 5px;
+  left: 240px;
   user-select: none;
 }
 
@@ -335,6 +353,17 @@ body {
   position: absolute;
   bottom: 70px;
   left: 400px;
+}
+
+.reg {
+  background-color: var(--background-cd);
+  position: absolute;
+  right: 750px;
+  bottom: 80px;
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  font-weight: bold;
 }
 
 #ch {
@@ -353,11 +382,65 @@ body {
   z-index: 2;
 }
 
-p {
+#ch2 {
+  color: var(--background-cd);
+  background-color: var(--text-icon-cd);
+  border: solid 2px var(--background-cd);
+  border-radius: 6px;
+  font-size: 23px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 76px;
+  left: 1105px;
+  user-select: none;
+  padding: 2px 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+p:not(.p) {
   color: var(--background-cd);
   font-size: 30px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.pazzle {
+  background-color: white;
+  height: 550px;
+  width: 1200px;
+  border-radius: 2px;
+  position: absolute;
+  left: 360px;
+  top: 20px;
+}
+
+.columnContanter {
+  width: 1200px;
+  margin: 0 auto;
+  /* this line will make the alignment from the flex to block or block to flex */
+  /* display: flex; */
+}
+
+.calumn1,
+.calumn2,
+.calumn3 {
+  width: 100%;
+  margin: 5px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.calumn1 {
+  background-color: #dba124;
+}
+
+.calumn2 {
+  background-color: rgb(11, 172, 118);
+}
+
+.calumn3 {
+  background-color: rgb(3, 158, 158);
 }
